@@ -1,0 +1,11 @@
+
+<ul>
+    {% for book in book_list%}
+    <li> {{book.title}} 
+        | <a href="{% url 'book-detail' book.id%}">View</a>
+        | <a href="{% url 'book-update' book.id%}">Update</a>
+        | Delete </li>
+    {% endfor%}
+</ul>
+
+<a href="{% url 'book-create' %}">Add New Book</a>
